@@ -8,13 +8,19 @@ from Python_ARQ import ARQ
 SESSION_NAME = "spr"
 DB_NAME = "db.sqlite3"
 API_ID = 6
-API_HASH = "eb06d4abfb49dc3eeb1aeb98ae0f581e"
+API_HASH = "eb06d4afb49dc3eeb1aeb98ae0f581e"
 ARQ_API_URL = "https://arq.hamker.dev"
 
 if exists("config.py"):
     from config import *
 else:
     from sample_config import *
+
+import asyncio
+try:
+    asyncio.get_event_loop()
+except RuntimeError:
+    asyncio.set_event_loop(asyncio.new_event_loop())
 
 session = None
 
