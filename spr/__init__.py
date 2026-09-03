@@ -16,7 +16,7 @@ if exists("config.py"):
 else:
     from sample_config import *
 
-session = ClientSession()
+session = None
 
 arq = ARQ(ARQ_API_URL, ARQ_API_KEY, session)
 
